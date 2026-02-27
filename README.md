@@ -7,33 +7,107 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-**Install PHP Dependencies**
-Install PHP Dependencies
+# Installation Guide
 
-**Install Frontend Dependencies**
+---
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/yourusername/tmdb-dashboard.git
+cd tmdb-dashboard
+```
+
+---
+
+## 2. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+---
+
+## 3. Install Frontend Dependencies
+
+```bash
 npm install
+```
 
-**Setup Environment File & Configure Database***
-Create database manually in MySQL.
+---
+
+## 4. Setup Environment File
+
+Copy the environment file:
+
+```bash
+cp .env.example .env
+```
+
+---
+
+## 5. Configure Database
+
+Create a new database manually in MySQL, then update your `.env` file:
+
+```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
-DB_PORT=
+DB_PORT=3306
 DB_DATABASE=
 DB_USERNAME=
 DB_PASSWORD=
+```
 
-**Configure TMDb API Key**
-TMDB_API_KEY= 7cbf285a9056e14c5b1cbb732a4b7912
-TMDB_BASE_URL=https://api.themoviedb.org/3
+---
 
-**Generate Application Key**
+## 6. Configure TMDb API Key
+
+Add your TMDb API key in `.env`:
+
+```env
+TMDB_API_KEY=
+TMDB_BASE_URL=
+```
+https://www.themoviedb.org/settings/api
+---
+
+## 7. Generate Application Key
+
+```bash
 php artisan key:generate
+```
 
-**Run Migration**
+---
+
+## 8. Run Database Migration
+
+```bash
 php artisan migrate
+```
 
-**Run Vite & Laravel Server**
-Vite: npm run dev
-Laravel Serve: php artisan serve
+---
 
-Open in browser: http://127.0.0.1:8000
+## 9. Run Frontend (Vite)
+
+```bash
+npm run dev
+```
+
+---
+
+## 10. Run Laravel Server
+
+```bash
+php artisan serve
+```
+
+---
+
+## 11. Open Application
+
+Open in your browser:
+
+```
+http://127.0.0.1:8000
+```
